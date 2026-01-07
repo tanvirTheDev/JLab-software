@@ -1,3 +1,4 @@
+import { Footer } from "@/components/Shared/Footer";
 import { Header } from "@/components/Shared/Header";
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
@@ -25,7 +26,7 @@ export default function RootLayout({
       <body className={`${manrope.variable} font-sans antialiased`}>
         <Header />
         {children}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );
