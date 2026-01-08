@@ -27,8 +27,7 @@ export function Footer() {
               </span>
             </div>
             <p className="text-muted dark:text-muted-foreground text-sm leading-relaxed">
-              Crafting digital experiences with precision and passion. Based in
-              San Francisco, working globally.
+              Crafting digital experiences with precision and passion.
             </p>
           </div>
 

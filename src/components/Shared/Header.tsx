@@ -21,7 +21,7 @@ export function Header() {
   const navItems = [
     { name: "Services", href: "#services" },
     { name: "Work", href: "#work" },
-    { name: "About", href: "#about" },
+    { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -74,7 +74,7 @@ export function Header() {
             className="hidden sm:block"
           >
             <Button className="bg-accent hover:bg-accent-hover text-white shadow-lg shadow-accent/25">
-              Start a Project
+              Download Now
             </Button>
           </motion.div>
 
