@@ -1,6 +1,7 @@
 "use client";
 import { CTASection } from "@/components/About/CTASection";
 import { HeroSection } from "@/components/About/HeroSection";
+import OurJourneySection from "@/components/About/JourneySection";
 import { MissionSection } from "@/components/About/MissonSection";
 import { TeamMember } from "@/components/About/TeamMember";
 import { TimelineSection } from "@/components/About/TimelineSection";
@@ -20,6 +21,7 @@ const AboutPage = () => {
         setIsPlaying={setIsVideoPlaying}
       />
       <TimelineSection />
+      <OurJourneySection />
       <TeamMember />
       <CTASection />
     </div>
