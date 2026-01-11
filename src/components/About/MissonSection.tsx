@@ -1,5 +1,60 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+
+interface AnimatedCounterProps {
+  value: string;
+  duration?: number;
+}
+
+const AnimatedCounter = ({ value, duration = 2 }: AnimatedCounterProps) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
+  const [count, setCount] = useState(0);
+
+  // Extract number and suffix from value (e.g., "50+" -> 50, "+")
+  const match = value.match(/^(\d+)(.*)$/);
+  const targetNumber = match ? parseInt(match[1], 10) : 0;
+  const suffix = match ? match[2] : "";
+
+  useEffect(() => {
+    if (!isInView) return;
+
+    let startTime: number | null = null;
+    const startValue = 0;
+    const endValue = targetNumber;
+
+    const animate = (currentTime: number) => {
+      if (startTime === null) startTime = currentTime;
+      const elapsed = (currentTime - startTime) / 1000; // Convert to seconds
+      const progress = Math.min(elapsed / duration, 1);
+
+      // Easing function (ease-out)
+      const easeOut = 1 - Math.pow(1 - progress, 3);
+      const currentValue = Math.floor(
+        startValue + (endValue - startValue) * easeOut
+      );
+
+      setCount(currentValue);
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      } else {
+        setCount(endValue);
+      }
+    };
+
+    requestAnimationFrame(animate);
+  }, [isInView, targetNumber, duration]);
+
+  return (
+    <span ref={ref}>
+      {count}
+      {suffix}
+    </span>
+  );
+};
 
 export const MissionSection = () => {
   return (
@@ -71,7 +126,7 @@ export const MissionSection = () => {
                     className="text-4xl font-bold text-[#00AAAA] mb-2"
                     style={{ fontFamily: "'Playfair Display', serif" }}
                   >
-                    {stat.number}
+                    <AnimatedCounter value={stat.number} duration={2} />
                   </h4>
                   <p className="text-base text-[#003366]/60 dark:text-slate-400 font-medium">
                     {stat.label}
