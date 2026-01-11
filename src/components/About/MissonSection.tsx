@@ -78,7 +78,7 @@ export const MissionSection = () => {
             />
             <div className="absolute bottom-8 left-8 z-20">
               <p className="text-white text-base font-medium opacity-90 mb-2">
-                Established 2018
+                Established 2017
               </p>
               <h3
                 className="text-white text-3xl font-bold"

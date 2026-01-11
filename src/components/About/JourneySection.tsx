@@ -2,27 +2,35 @@ import { motion, Variants } from "framer-motion";
 
 const journeyEvents = [
   {
-    year: "2018",
-    title: "JLab Founded",
+    year: "2017",
+    title: "JLab Software Founded",
     description:
-      "Started in a small garage with a vision to simplify enterprise software.",
+      "JLab Software was founded in Narayanganj with a clear mission: to build reliable, practical software solutions for real-world businesses.",
     side: "right",
     isHighlight: true,
   },
   {
-    year: "2020",
-    title: "First Major Enterprise Client",
+    year: "2019",
+    title: "Industry-Focused Software Solutions",
     description:
-      "Secured a partnership with a Fortune 500 company, validating our scalable architecture.",
+      "Started delivering customized software for hospitals and garment companies, focusing on automation, efficiency, and scalability.",
     side: "left",
     isHighlight: false,
   },
   {
-    year: "2023",
-    title: "Global Expansion",
+    year: "2022",
+    title: "Enterprise & Corporate Web Solutions",
     description:
-      "Opened offices in London and Singapore to serve our growing international client base.",
+      "Expanded services to enterprise-level websites and business platforms, helping companies build strong and professional digital identities.",
     side: "right",
+    isHighlight: false,
+  },
+  {
+    year: "2024",
+    title: "Growing with Modern Technologies",
+    description:
+      "Adopted modern web technologies to deliver secure, scalable, and high-performance software solutions tailored to client needs.",
+    side: "left",
     isHighlight: false,
   },
 ];

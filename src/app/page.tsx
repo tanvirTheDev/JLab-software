@@ -1,7 +1,9 @@
 import { CTASection } from "@/components/Homepage/CTA/CTASection";
 import { HeroSection } from "@/components/Homepage/HeroSection";
+import { Partners } from "@/components/Homepage/Partners/Partners";
 import { ServiceSection } from "@/components/Homepage/ServiceSection/ServiceSection";
 import { TechStackSection } from "@/components/Homepage/TechStackSection/TechStackSection";
+import { Testimonial } from "@/components/Homepage/Testimonial/Testimonial";
 import { WorkSection } from "@/components/Homepage/Work/Work";
 
 export default function Home() {
@@ -11,6 +13,8 @@ export default function Home() {
       <TechStackSection />
       <ServiceSection />
       <WorkSection />
+      <Partners />
+      <Testimonial />
       <CTASection />
     </div>
   );

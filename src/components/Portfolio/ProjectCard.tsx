@@ -43,7 +43,7 @@ export const ProjectCard = ({
         >
           {/* Tags */}
           <div className="flex gap-2 mb-3 flex-wrap">
-            {project.tags.map((tag) => (
+            {project.tags.map((tag: any) => (
               <span
                 key={tag}
                 className="px-2 py-1 rounded-md bg-white/10 backdrop-blur-md text-white text-xs font-semibold border border-white/10"
